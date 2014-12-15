@@ -16,7 +16,7 @@ class CloneCommand extends Command
 
     /**
      * Clone a repository into a new directory
-     * 
+     *
      * ``` php
      * $git = new PHPGit\Git();
      * $git->clone('https://github.com/kzykhys/PHPGit.git', '/path/to/repo');
@@ -36,7 +36,7 @@ class CloneCommand extends Command
      */
     public function __invoke($repository, $path = null, array $options = array())
     {
-        $options = $this->resolve($options);
+        //$options = $this->resolve($options);
         $builder = $this->git->getProcessBuilder()
             ->add('clone')
             ->add('--quiet');
