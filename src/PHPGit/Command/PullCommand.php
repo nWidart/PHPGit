@@ -31,7 +31,7 @@ class PullCommand extends Command
      */
     public function __invoke($repository = null, $refspec = null, array $options = array())
     {
-        $options = $this->resolve($options);
+        //$options = $this->resolve($options);
         $builder = $this->git->getProcessBuilder()
             ->add('pull');
 

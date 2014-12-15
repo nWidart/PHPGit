@@ -22,7 +22,7 @@ class CheckoutCommand extends Command
      * $git->setRepository('/path/to/repo');
      * $git->checkout('develop');
      * ```
-     * 
+     *
      * ##### Options
      *
      * - **force** (_boolean_) Proceed even if the index or the working tree differs from HEAD
@@ -36,7 +36,7 @@ class CheckoutCommand extends Command
      */
     public function __invoke($branch, array $options = array())
     {
-        $options = $this->resolve($options);
+        //$options = $this->resolve($options);
         $builder = $this->git->getProcessBuilder()
             ->add('checkout');
 
